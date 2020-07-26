@@ -2,6 +2,10 @@ type Query {
     articles(where: ArticlesWhereInput): [Article!]!
 }
 
+type Mutation {
+    addArticle(id:ID!, title:String!, content:String!): Article
+}
+
 input ArticlesWhereInput {
     categoryId: ID
 }

@@ -48,3 +48,76 @@ npm run dev
 - 유저
 - 좋아요
 - 이미지
+
+---
+query 호출 예시
+```graphql
+query {
+  articles(where: {
+    	categoryId: 1
+  }) {
+    id
+    title
+    createdAt
+    updatedAt
+    deletedAt
+    category {
+      id
+    }
+    
+    author {
+      id
+      nickname
+      image {
+        id
+        url
+      }
+    }
+    comments {
+      author {
+        id
+        nickname
+      }
+    }
+  }
+}
+```
+
+변수 활용.
+```graphql
+query getArticles($where: ArticlesWhereInput!) {
+  articles(where: $where) {
+    id
+    title
+    createdAt
+    updatedAt
+    deletedAt
+    category {
+      id
+    }
+    
+    author {
+      id
+      nickname
+      image {
+        id
+        url
+      }
+    }
+    comments {
+      author {
+        id
+        nickname
+      }
+    }
+  }
+}
+```
+QUERY VALIABLES (Playground 왼쪽 하단)
+```json
+{
+  "where": {
+    "categoryId": 1
+  }
+}
+```
