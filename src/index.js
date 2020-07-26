@@ -51,6 +51,20 @@ const resolvers = {
                 nickname: "Tony",
                 imageId: 10
             }
+        },
+        comments(parent) {
+            // parent.id => Article.id
+            // 댓글 테이블을 조회하여 댓글리스트를 가져온다.
+
+            return [
+                {
+                    id: 1,
+                    createdAt: "",
+                    updatedAt: "",
+                    authorId: 1,
+                    content: "댓글!!!!!!"
+                }
+            ]
         }
     },
     User: {
@@ -62,6 +76,19 @@ const resolvers = {
                 createdAt: "",
                 updatedAt: "",
                 url: "http://fdsafasdf.com"
+            }
+        }
+    },
+    Comment: {
+        author(parent) {
+            // parent.id => Author.id
+            // User테이블을 조회 한다.
+            return {
+                id: 3,
+                createdAt: "",
+                updatedAt: "",
+                nickname: "Seolys",
+                imageId: 10
             }
         }
     }
