@@ -1,6 +1,6 @@
 ## 서버 세팅 과정.
 
-node서버 init
+### 1. node서버 init
 ```shell
 # init(package.json 생성)
 npm init -y
@@ -10,21 +10,22 @@ npm install
 
 # 서버 실행
 node ./src/index.js 
-```  
-아폴로 설치
+```
+
+### 2. 아폴로 설치
 ```shell
 npm i apollo-server
 
 node ./src/index.js
 ```
 
-nodemon 설치
+### 3. nodemon 설치
 ```shell
 npm i --save-dev nodemon
 ```
 
 package.json에 script추가
-```json
+```
 {
     /* 생략 */
     "scripts": {
@@ -34,6 +35,7 @@ package.json에 script추가
     /* 생략 */
 }
 ```
+실행
 ```shell
 npm run dev
 ```
