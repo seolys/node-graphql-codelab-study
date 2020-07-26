@@ -18,8 +18,12 @@ npm i apollo-server
 
 node ./src/index.js
 ```
+브라우저로 Playground 접속
+```
+http://localhost:3000/
+```
 
-### 3. nodemon 설치
+### 3. nodemon 설치(node서버 자동 deploy)
 ```shell
 npm i --save-dev nodemon
 ```
